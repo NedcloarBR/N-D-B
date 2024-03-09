@@ -3,7 +3,9 @@
 	"packageManager": "yarn@4.1.1",
 	"private": true,
 	"workspaces": {
-		"packages": ["Packages/*"]
+		"packages": [
+			"Packages/*"
+		]
 	},
 	"author": {
 		"name": "Miguel Alexandre Uhlein <NedcloarBR>",
@@ -11,21 +13,10 @@
 		"url": "https://github.com/NedcloarBR/"
 	},
 	"scripts": {
-		"update": "yarn upgrade-interactive",
-		"postinstall": "husky install || true",
-		"format": "yarn dlx @biomejs/biome format --write ./",
-		"lint": "yarn dlx @biomejs/biome lint ./",
-		"check": "yarn dlx @biomejs/biome check --apply ./"
+		"update": "yarn upgrade-interactive"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.5.3",
-		"@commitlint/cli": "^19.0.3",
-		"@commitlint/config-angular": "^19.0.3",
-		"@commitlint/config-conventional": "^19.0.3",
-		"commitizen": "^4.3.0",
-		"cross-env": "^7.0.3",
-		"husky": "^9.0.11",
-		"lint-staged": "^15.2.2",
 		"typescript": "^5.1.6"
 	}
 }

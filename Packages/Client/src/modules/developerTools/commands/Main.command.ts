@@ -20,20 +20,6 @@ export class DeveloperToolsMainSlashCommand {
 			.setDescriptionLocalizations(Localization.description)
 			.addSubcommand((command) =>
 				command
-					.setName("eval")
-					.setNameLocalizations(Localization.options.eval.name)
-					.setDescription("Evaluate some codes to test it without restart the bot every time")
-					.setDescriptionLocalizations(Localization.options.eval.description)
-					.addStringOption((option) =>
-						option
-							.setName("code")
-							.setNameLocalizations(Localization.options.eval.options.code.name)
-							.setDescription("Code to begin evaluated")
-							.setDescriptionLocalizations(Localization.options.eval.options.code.description),
-					),
-			)
-			.addSubcommand((command) =>
-				command
 					.setName("test")
 					.setNameLocalizations(Localization.options.test.name)
 					.setDescription("Command for Testing things")
@@ -55,7 +41,7 @@ export class DeveloperToolsMainSlashCommand {
 		const Payload = new RunSubCommandEvent()
 			.setAdditional("Sub")
 			.setContext(context)
-			.setSubList([{ name: "eval" }, { name: "test" }]);
+			.setSubList([{ name: "test" }]);
 		this.eventEmitter.emit("commands.sub", Payload);
 	}
 }

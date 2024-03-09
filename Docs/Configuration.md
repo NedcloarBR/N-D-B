@@ -24,42 +24,6 @@
 
 </details>
 
-## 🎶 Music Requirements
-
-<details>
-  <summary>Click to expand</summary>
-
-_To allow your Bot to play music, you need to connect it to a LavaLink server!_
-
-1. Make sure `Java 17` is installed on your system!
-   - [Azul](https://www.azul.com/downloads/?architecture=x86-64-bit&package=jdk#zulu), [Adopt](https://adoptium.net/), [sdkman](https://sdkman.io/install) (Recommended for Linux Hosts), [Oracle JDK](https://www.oracle.com/java/technologies/downloads/) (Recommended for Windows)
-
-- Lavalink v4 [Github Page](https://github.com/lavalink-devs/Lavalink)
-
-2. Download the [Lavalink](https://github.com/lavalink-devs/Lavalink) v4
-   - Here is a direct link: https://github.com/lavalink-devs/Lavalink/releases/download/4.0.0-beta.1/Lavalink.jar
-   - If you are on linux do this: `wget https://github.com/lavalink-devs/Lavalink/releases/download/4.0.0-beta.1/Lavalink.jar` (prep: `apt-get install -y wget`)
-3. Copy [Lavalink-application.yml](https://github.com/NedcloarBR/N-D-B/blob/master/Docs/Examples/Lavalink-application.yml), rename to `application.yml`
-   - Download the example, change the it's the configuration for the lavalink.jar file!
-4. Now put `application.yml` and `Lavalink.jar` in the same folder `./Packages/Lavalink` and start it
-   - To start LavaLink type: `java -jar Lavalink.jar`
-   - Make sure to keep your terminal Open!
-5. You need to change some configurations in **application.yml** with your configs. see <a href="#❓ Where to get which Api-Key(s)">❓ Where to get which Api-Key(s)</a>
-   Here's the list
-
-```yml
-spotify: # Line 88
-  clientId: ${SpotifyClientId}
-  clientSecret: ${SpotifyClientSecret}
-deezer: # Line 99
-  masterDecryptionKey: ${DeezerMasterDecryptionKey}
-yandexmusic: # Line 101
-  accessToken: ${YandexMusicAccessToken}
-```
-
-6. Download the [Lavalink Plugins](https://github.com/lavalink-devs/Lavalink/blob/master/PLUGINS.md) (SponsorBlock plugin, LavaSrc plugin, DuncteBot plugin)
-and put the "**.jar**" files in plugins folder in same directory of `Lavalink.jar` and `application.yml`
-   </details>
 
 ## 🤖 Configuration and Starting
 
@@ -70,7 +34,6 @@ and put the "**.jar**" files in plugins folder in same directory of `Lavalink.ja
 
 1.  Rename the `.env.client` to `.env` and put it in `./Packages/Client/.env`
 2.  Rename the `.env.global` to `.env` and put it in `./`
-3.  Rename the `Lavalink.application.yml` to `application.yml` and put it in `./Packages/Lavalink` see <a href="#🎶 Music Requirements">🎶 Music Requirements</a> for more info
 4.  Rename the `Example.Config.ts` to `Config.ts` and put it in `./Packages/Client/Src/Config`
 5.  Now Build the Project running `npm run build` or `yarn build` **NOTE:** this commands doesn't work right now, still WIP
 6.  Finally start the N-D-B System by opening a console in that folder and typing: `npm run start`
@@ -90,17 +53,10 @@ and put the "**.jar**" files in plugins folder in same directory of `Lavalink.ja
    - `DatabaseName` your database name same from `DATABASE_URL`
    - `DatabasePassword` your database password same from `DATABASE_URL`
 
-   - `LavalinkHOST` if you're Self Hosting Lavalink set this config as "localhost"
-   - `LavalinkPassword` by default this config is "youshallnotpass" check your `./Packages/Lavalink/application.yml`
-   - `LavalinkPort` by default this config is "2333" check your `./Packages/Lavalink/application.yml`
-   - `SpotifyClientId` you can get it from: [Spotify Developer Portal](https://developer.spotify.com)
-   - `SpotifyClientSecret` you can get it from: [Spotify Developer Portal](https://developer.spotify.com)
-
 2. `./.env`
 
 - `POSTGRES_DB` The database name that is used by Prima in Client
 - `POSTGRES_DB` The database password that is used by Prima in Client
-- `LAVALINK_SERVER_PASSWORD` by default this config is "youshallnotpass" check your `./Packages/Lavalink/application.yml`
 
 3. `./Packages/Client/Src/Config/Config.ts`
 
@@ -109,14 +65,5 @@ and put the "**.jar**" files in plugins folder in same directory of `Lavalink.ja
   - `TestGuild:ID` set your test guild id for test some commands
   - `Owners` this is an Array to put the User ID of the Developers of the Bot
   - `Client:ID` put your Bot Client ID
-- `Emojis` set your Custom Emojis full string
-
-4. `./Packages/Lavalink/application.yml`
-   - `server:port` by default this config is "2333"
-   - `lavalink:server:password` by default this config is "youshallnotpass"
-   - `plugins:lavasrc:spotify:clientId` change it from `${SpotifyClientId}` to your `ClientId`, you can get it from: [Spotify Developer Portal](https://developer.spotify.com)
-   - `plugins:lavasrc:spotify:clientSecret` change it from `${SpotifyClientSecret}` to your `ClientSecret`, you can get it from: [Spotify Developer Portal](https://developer.spotify.com)
-   - `plugins:lavasrc:deezer:masterDecryptionKey` So... I don't really know where to get that token... Sorry
-   - `plugins:lavasrc:yandexmusic:accessToken` change it from `${YandexMusicAccessToken}` to your `AccessToken` see [This Tutorial](https://github.com/topi314/LavaSrc#yandex-music)
 
 </details>

@@ -15,51 +15,14 @@
 
 </div>
 
-<p align="center">
-  <a href="#❓ Sobre">Sobre</a>
-  •
-  <a href="📝 To-Do">To-Do</a>
-  •
-  <a href="https://github.com/NedcloarBR/N-D-B/blob/master/Docs/Configuration.md">Instalação</a>
-  •
-  <a href="#📖 Licença">Licença</a>
-  •
-  <a href="#🗞️ Créditos">Créditos</a>
-</p>
+# Setup
 
-## ❓ Sobre
+Follow the steps in [Configuration.md](https://github.com/NedcloarBR/N-D-B/blob/nestjs-i18n-issue/Docs/Configuration.md)
 
-N-D-B é um Bot do Discord de Código Aberto totalmente personalizável em constante crescimento com foco em melhorar sua experiencia nos servidores! Você pode convida-lo para seu servidor clicando [aqui](https://discord.com/oauth2/authorize?client_id=708822043420000366&permissions=8&redirect_uri=http%3A%2F%2Flocalhost%3A3001%2Fapi%2Fauth%2Fredirect&scope=bot%20applications.commands)! Você também pode se juntar ao meu servidor oficial [NedcloarBR Community](https://discord.gg/5CHARxbaRk) para dar suas sugestões, tirar duvidas e pedir assistência! O Bot vem com muitos tipos de comandos e recursos para sua melhor experiencia!
+inside `Packages/Client` folder
+Run `yarn install`
+then `yarn prisma generate`
+then `yarn prisma migrate dev`
+finally `yarn start:dev`
 
-Se você gostou do projeto, sinta-se livre para deixar aquela ⭐ aqui no Github para ele crescer cada vez mais!
-
-## 📝 To-Do
-
-- [ ] Multilingual README in Docs
-- [ ] Systems
-  - [ ] Moderation
-    - [ ] Manual
-    - [ ] Automatic
-  - [ ] Economy
-  - [ ] Tickets
-  - [ ] Update from [Legacy Branch](https://github.com/NedcloarBR/N-D-B/tree/Pure-DiscordJS) to [Necord](https://necord.org/) with my custom handle system
-    - [ ] ReactionRoles
-      - [x] Partial migrated to Necord but not tested yet
-      - [ ] Commands Update(Legacy/Slash), Builder(Legacy), Fetch(Legacy/Slash)
-      - [ ] Update ReactionRoleAdd/Remove Events
-    - [ ] Music
-    - [ ] Full or Partial Clone [NQN](https://nqn.blue/)
-      - [x] Partial
-      - [ ] Full
-  - [ ] Sharding
-  - [ ] Top.gg Autopost
-
-## 📖 Licença
-
-Lançado sob a [GPL-3.0 License](https://github.com/NedcloarBR/N-D-B/blob/master/License) license.
-
-## 🗞️ Créditos
-
-- **OBS** Quase todos os repositórios que eu utilizar como referencia para a criação do N-D-B estarão citados abaixo e sempre irei fazer alterações no projeto original para se encaixar melhor ao sistema existente do N-D-B e também não ser totalmente uma "copia" deles
-
-- Quer ver seu nome nesta lista? - veja a pagina de [Contribuição](https://github.com/NedcloarBR/N-D-B/blob/master/Docs/CONTRIBUTING.md).
+The log will appear

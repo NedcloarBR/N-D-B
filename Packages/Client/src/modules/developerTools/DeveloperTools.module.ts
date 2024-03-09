@@ -1,9 +1,9 @@
 import { Global, Module } from "@nestjs/common";
 
-import { DeveloperToolsMainSlashCommand, EvalCommand, TestCommand } from "./commands";
+import { DeveloperToolsMainSlashCommand, TestCommand } from "./commands";
 
 @Global()
 @Module({
-	providers: [DeveloperToolsMainSlashCommand, EvalCommand, TestCommand],
+	providers: [DeveloperToolsMainSlashCommand, TestCommand],
 })
 export class DeveloperToolsModule {}

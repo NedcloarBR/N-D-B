@@ -1,6 +1,4 @@
 import { CommandsService } from "@/modules/commands/Commands.service";
-import { Buttons } from "@/modules/components/Buttons.component";
-import { NDBService } from "@/modules/core/NDB.service";
 import { DatabaseService } from "@/modules/database/database.service";
 import { PrismaService } from "@/modules/database/prisma/Prisma.service";
 import { GuildRepository } from "@/modules/database/repositories/Guild.repository";
@@ -9,11 +7,6 @@ import { I18nService } from "@/modules/i18n/i18n.service";
 import { AsyncLocalStorage } from "async_hooks";
 import { AlsStore } from ".";
 import { Extends, Repositories, Services } from "./Constants";
-
-export const NDBServiceProvider = {
-	provide: Services.NDB,
-	useClass: NDBService,
-};
 
 export const PrismaProvider = {
 	provide: Services.Prisma,
@@ -48,9 +41,4 @@ export const TranslateProvider = {
 export const CommandProvider = {
 	provide: Extends.Command,
 	useClass: CommandsService,
-};
-
-export const ButtonsComponentsProvider = {
-	provide: Extends.Buttons,
-	useClass: Buttons,
 };
